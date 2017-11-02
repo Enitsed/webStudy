@@ -1,0 +1,29 @@
+﻿웹서버 : apache - tomcat
+
+웹 클라이언트 : chrome
+
+환경설정
+1) c:\job\util\apache-tomcat-8.5.23\conf\server.xml 수정
+	포트번호 : 8080 => 8090
+	<Connector port="8090" protocol = "HTTP/1.1" connectionTimeout="20000" redirectPort = "8443" URIEncoding = "UTF-8"/>
+
+
+2) 환경변수 설정
+컴퓨터 -> 속성 -> 고급 시스템설정-> 고급> 환경변수
+변수이름: JAVA_HOME
+변수값:C:\Program Files\Java\jdk1.8.0_144
+
+변수이름: PATH
+변수값:C:\Program Files\Java\jdk1.8.0_144\bin
+
+변수이름: CATALINA_HOME
+변수값:C:\job\util\apache-tomcat-8.5.23
+
+변수이름: PATH
+변수값:C:\job\util\apache-tomcat-8.5.23\bin
+
+서버실행
+cmd > startup
+
+chrome 브라우저
+http://127.0.0.1:8090/myhome/index.html

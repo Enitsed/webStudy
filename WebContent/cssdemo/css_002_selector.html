@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>css_002_selector</title>
+<style type="text/css">
+/* 선택자 우선순위 */
+/* 0001 */
+p {
+	color: red;
+	font-size: 20px;
+}
+
+p {
+	background-color: yellow;
+	color: blue;
+}
+/* 0010 */
+.order {
+	color: green
+}
+/* 0100 */
+#unit {
+	color: orange
+}
+</style>
+</head>
+<body>
+	<p>test1</p>
+	<!-- 인라인 스타일은 우선순위 1000 -->
+	<p class="order" id="unit" style="color: purple">test2</p>
+	<p>test3</p>
+	<p class="order">test4</p>
+
+
+</body>
+</html>
