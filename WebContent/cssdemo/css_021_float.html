@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css_021_float</title>
+<style type="text/css">
+/* float(플로트) : 
+1. 플로트는 박스의 위치를 부모요소의 안에서 왼쪽 또는 오른쪽으로 이동시키는 기능이다.
+2. 플로트가 지정된 박스는 문서의 일반적인 흐름에 영향을 받지 않으면서 이동된 위치에 떠있다.
+*/
+.wrap {
+	background-color: gray;
+}
+
+div.wrap div {
+	width: 100px;
+	height: 100px;
+}
+
+.box1 {
+	background-color: red;
+	float: left;
+}
+
+.box2 {
+	background-color: green;
+	float: left;
+}
+
+.box3 {
+	background-color: blue;
+	float: left;
+}
+
+.wrap span {
+	float: right;
+}
+
+.other {
+	clear: both;
+}
+
+img {
+	float: left;
+	margin-right: 20px;
+}
+
+.box4 {
+	clear: both;
+}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		&nbsp; <span>inline</span>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+	</div>
+	<div class="other" style="background-color: yellow; height: 500px">
+		<img src="images/aa.jpg" width="200" height="300" alt="영화배우" />
+		<p>2일 오전 송파구 서울아산병원에서 열린 영결식과 발인에는 연예계 수많은 동료가 참석해 그의 마지막 길을 배웅했다.
+			이날 오전 10시 열린 영결식은 종교의식 없이 유족과 소속사 나무엑터스 임직원, 황정민·정진영 등 동료 배우들이 참석한
+			가운데 40분간 비공개로 치러졌다. 유족들은 고인의 생전모습을 담은 영상을 함께 보여 고인과 관련한 추억을 떠올리며 눈시울을
+			적셨다. 이후 11시 김주혁 발인에는 황정민·정진영·유준상·김지수·도지원·천우희 등과 차태현·유호진 PD·데프콘 등
+			`1박2일` 멤버 등 100여 명이 함께 했다. 유족들은 고인이 미소 짓는 모습의 흑백 영정을 품에 안고 무거운 발걸음으로
+			운구 차량에 올랐다. 고인의 연인 이유영은 한참 동안 고개를 숙이며 고인을 기린 뒤 운구차에 탑승했다. 김주혁 발인 당시,
+			병원 주변에는 200여명의 팬이 몰려 고인을 눈물 속에 배웅했다. 평소 인간미 넘쳤던 그의 죽음에 수많은 연예계 동료,
+			선후배들이 애통해 했다. 전도연을 비롯해 최불암, 안성기, 지성, 송윤아, 유지태, 차승원, 임하룡, 김상호, 박철민,
+			정상훈, 송중기 등이 빈소를 찾아 슬픔을 나눴다. 같은 소속사 동료인 유준상은 이틀 연속 빈소를 방문했다. 김주혁을 추모하는
+			다양한 연령대의 일반 팬들도 빈소를 찾아와 고인의 죽음을 애도했다.</p>
+	</div>
+	<div class="box4"></div>
+</body>
+</html>
