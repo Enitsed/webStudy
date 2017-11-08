@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_011_String</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var data = 'It\'s alright';
+		//It's alright
+		document.write(data + "<br/>");
+
+		//length : 문자열 길이를 리턴
+		//12
+		document.write(data.length + "<br/>");
+
+		/*
+		 특정범위 테이터를 리턴해주는 3가지 메소드
+		 1. slice(start, end);
+		 2. substring(start, end);
+		 3. substr(start, length);
+		*/
+		
+		var str = "Apple, Banana, Kiwi";
+		//7인덱스부터 13미만 인덱스까지
+		//Banana
+		document.write(str.slice(7,13)+"<br/>");
+		//뒤에서부터 검색할때 음수값 사용
+		document.write(str.slice(-12, -6)+"<br/>");
+		document.write(str.substring(7, 13)+"<br/>");
+		//substring()은 음수값을 지원하지 않는다.
+		document.write(str.substr(7,6)+"<br/>");
+		
+		str = "Please visit Microsoft! and microsoft Microsoft";
+		//Please visit W3Schools! and microsoft Microsoft
+		document.write(str.replace("Microsoft", "W3Schools")+"<br/>");
+		//Please visit W3Schools! and microsoft W3Schools
+		document.write(str.replace(/Microsoft/g, "W3Schools")+"<br/>");
+		//Please visit W3Schools! and W3Schools W3Schools
+		document.write(str.replace(/Microsoft/ig, "W3Schools")+"<br/>");
+		var text1 = "Hello World";
+		//HELLO WORLD
+		document.write(text1.toUpperCase() + "<br/>");
+		//hello world
+		document.write(text1.toLowerCase() + "<br/>");
+		
+		var text2="javascript";
+		//Hello World, javascript
+		document.write(text1.concat(",", text2)+"<br/>");
+		
+		var str2 = "HELLO WORLD";
+		//H //특정인덱스의 문자리턴
+		document.write(str2.charAt(0)+"<br/>");
+		//72 특정인덱스의 아스키 코드값
+		document.write(str2.charCodeAt(0) + "<br/>");
+		
+		var txt = "a,b,c,d,e";
+		document.write(typeof txt + "<br/>"); //string
+		
+		var arr = txt.split(",");
+		//object true
+		document.write(typeof arr+" "+ (arr instanceof Array)+"<br/>");
+		// a b c d e
+		for(var index in arr)
+			document.write(arr[index]+"<br/>");
+		
+		var txt2 = "hijklmn";
+		var arr2 = txt2.split("");
+		for (var index in arr2)
+			document.write(arr2[index]+"<br/>");
+		
+		var str3 = "The rain in SPAIN stays mainly in the plain";
+		var res = str3.match(/ain/g);
+		//검색데이터와 일치하는 문자열이 없으면 null을 반환
+		//ain,ain,ain
+		document.write(res + "<br/>");
+		
+		document.write("<hr/>");
+		res = str3.search("ain");
+		//검색데이터와 일치하는 문자열이 없으면 -1을 리턴
+		//5
+		document.write(res+"<br/>");
+		document.write("<hr/>");
+		
+		var data = 10;
+		//number, string
+		document.write(typeof data +","+ typeof String(data)+"<br/>");
+	
+	</script>
+</body>
+</html>

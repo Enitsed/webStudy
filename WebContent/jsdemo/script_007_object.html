@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_007_object</title>
+</head>
+<body>
+<script type="text/javascript">
+var data = 10; //number
+var obj = new Number(data); //object
+
+document.write(typeof data +"<br/>"); //number
+document.write(typeof obj +"<br/>"); //object
+
+document.write(data.toString()+"<br/>"); //10
+document.write(obj.toString()+"<br/>"); //10
+
+document.write(typeof data.toString()+"<br/>"); //string
+document.write(typeof obj.toString()+"<br/>"); //string 
+document.write((obj.toString() instanceof String)+"<br/>"); //false
+//기본데이터 타입의 string으로 바뀐다
+var str1 = new String(data);
+var str2 = new String(obj);
+document.write(typeof str1+"<br/>"); //object
+document.write(typeof str2+"<br/>"); //object
+document.write((str1 instanceof String)+"<br/>"); //true
+document.write((str2 instanceof String)+"<br/>"); //true
+
+document.write(typeof obj.valueOf()+"<br/>"); //number
+</script>
+
+</body>
+</html>

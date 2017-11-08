@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_008_number</title>
+</head>
+<body>
+<script type="text/javascript">
+	var data = 123;
+	var str = data.toString();
+	var obj = new Number(123);
+	
+	//123, 123, 123
+	document.write(data+","+str+","+obj+"<br/>");
+	
+	//number, string, object
+	document.write(typeof data+","+typeof str+","+obj+"<br/>");
+	
+	var res = data / "korea";
+	var res2 = data / "10";
+	
+	//NaN(Not a Number)
+	//NaN, 12.3
+	document.write(res+","+res2+"<br/>");	
+	
+	var a = new Number(100);
+	var b = new Number(100);
+	var c = 100;
+	var d = 100;
+	
+	//false, true
+	document.write((a==b)+","+(c==d)+"<br/>");
+	
+	//valueOf() : 객체에 저장된 값을 리턴한다.
+	//number
+	document.write(typeof a.valueOf()+"<br/>");
+	
+	//true
+	document.write((a.valueOf()==b.valueOf())+"<br/>");
+	
+	//100
+	document.write(a.valueOf());
+	
+	/* Integer = new Integer(100);
+	Integer = new Integer(100);
+	a==b(false)
+	
+	int c = 100;
+	int d = 100;
+	c==d (true)
+	
+	a.intValue()==b.intValue() (true) */
+	
+	var k = 200;
+	//toString() : 숫자를 문자열로 반환
+	//string
+	document.write(typeof k.toString()+"<br/>");
+	document.write(typeof true.toString()+"<br/>");
+	var arr=[10,20,30];
+	document.write(typeof arr.toString()+"<br/>");
+	//10,20,30 : 통으로 문자열로 변함 -> 배열로 이렇게 쓰는건 아님
+	document.write(arr.toString()+"<br/>");
+	
+	var obj={"width":10, "height":20};
+	document.write(typeof obj.toString()+"<br/>"); //string
+	document.write(obj.toString()+"<br/>"); //[object Object]
+	document.write(obj.toString().width+"<br/>"); //undefined
+	document.write(obj.width+"<br/>"); //10
+	
+	var m ="5";
+	var p ="3";
+	
+	//53
+	document.write((m+p)+"<br/>");
+	
+	//number
+	document.write(typeof parseInt(m)+"<br/>");
+	//8 정수+정수
+	document.write(parseInt(m)+parseInt(p)+"<br/>");
+	//8 정수+실수
+	document.write(parseInt(m)+parseFloat(p)+"<br/>");
+</script>
+
+</body>
+</html>

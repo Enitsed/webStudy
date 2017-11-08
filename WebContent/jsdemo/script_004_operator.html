@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_004_operator</title>
+<script type="text/javascript">
+/*
+연산자
+1. 산술연산자
+2. 문자결합연산자 (+)
+3. 대입연산자
+4. 증감연산자
+5. 비교연산자(===, !==, ==, !=)
+6. 논리연산자
+7. 삼항조건연산자
+8. 데이터타입연산자 (typeof, instanceof)
+*/
+
+var x=10; //number
+var y="10" //string
+
+document.write((x==y)+"<br/>"); //값만 비교 true
+document.write((x===y)+"<br/>"); //값과 타입 비교 false
+
+document.write(typeof x+"<br/>"); //number
+document.write((x instanceof Number)+"<br/>"); //false
+
+var nb = new Number(x);
+document.write(typeof nb+"<br/>"); //object
+document.write((nb instanceof Number)+"<br/>"); //true
+</script>
+</head>
+<body>
+
+</body>
+</html>

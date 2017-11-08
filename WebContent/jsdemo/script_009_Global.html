@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_009_Global</title>
+</head>
+<body>
+<!--
+ Global 객체에서 제공하는 number타입으로 변환해주는 메소드 3가지 
+ 1. Number()
+ 2. parseInt()
+ 3. parseFloat()
+-->
+	<script type="text/javascript">
+		var data = true;
+		//1 number	
+		document.write(Number(data) + " " + typeof Number(data) + "<br/>");
+		//NaN(Not a Number)	
+		document.write(parseInt(data) + "<br/>");
+		
+		var sn = "10";
+			//sn = "24.5";
+		//10 number
+		//24 number ->반올림 없이 버린다.
+		document.write(parseInt(sn)+" "+typeof parseInt(sn)+"<br/>");
+		//24.5 number
+		//10 number
+		document.write(parseFloat(sn)+" "+typeof parseFloat(sn)+"<br/>");
+		
+		
+	</script>
+</body>
+</html>

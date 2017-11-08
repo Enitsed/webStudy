@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_005_statement</title>
+</head>
+<body>
+	<!--
+ 제어문
+ 1. 선택문 : if~else, switch~case
+ 2. 반복문 : for, while, do~while, for ~in
+ 3. 기타    : break;
+  -->
+	<script type="text/javascript">
+		var data = 2;
+		switch (data) {
+		case 1:
+			document.write(10 + "<br/>");
+			break;
+		case 2:
+			document.write(20 + "<br/>");
+			break;
+		default:
+			document.write("end");
+		}
+		
+		document.write("<hr/>");
+		
+		//boolean변경
+		data=true;
+		switch(data){
+		case true:
+			document.write("OK");
+			break;
+		case false:
+			document.write("fail");
+			break;
+		}
+		
+		document.write("<hr/>");
+		
+		var arr=[10,20,30,40,50];
+		for(var index in arr)
+			document.write(arr[index]+"<br/>");
+
+	</script>
+
+</body>
+</html>
