@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_017_RegExp</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var str = "The Best things in best life are best free";
+		// 대소문자 구분
+		// 19
+		document.write(str.search(/best/) + "<br/>");
+
+		// 대소문자 구분안함
+		// 4
+		document.write(str.search(/best/i) + "<br/>"); // 대소문자 구분 안함 - i
+		document.write("<hr/>");
+
+		var str2 = "The Best things in best life are best free";
+		// best
+		document.write(str2.match(/best/) + "<br/>");
+
+		// best,best
+		document.write(str2.match(/best/g) + "<br/>"); // 중복 문자열 포함 - i
+		// Best,best,best
+		document.write(str2.match(/best/gi) + "<br/>"); // 대소문자 구분없이 중복문자열까지 전부 가져오기 -gi
+
+		var patt = /e/;
+		// test 메소드는 논리값을 반환한다.
+		document.write(patt.test(str2) + "<br/>"); // true
+
+		patt = /y/i;
+		document.write(patt.test(str2) + "<br/>"); // false
+
+		// 일치하는 값이 없으면 null을 리턴한다
+		document.write(patt.exec(str2) + "<br/>"); // null
+		document.write(/e/.exec(str2) + "<br/>"); // e
+		document.write("<hr/>");
+
+		var ex = new RegExp("e");
+		document.write(ex.test(str2) + "<br/>"); // true
+
+		ex = new RegExp("F", "i");
+		document.write(ex.test(str2) + "<br/>"); // true
+	</script>
+</body>
+</html>

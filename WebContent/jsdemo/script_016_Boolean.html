@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_016_Boolean</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 비교값 만족시 true
+		document.write(Boolean(3 > 2) + "<br/>"); //true
+		// 데이터가 있으면 true
+		document.write(Boolean("korea") + "<br/>"); //true
+		// 숫자는 0을 제외한 나머지 숫자들은 모두 true
+		document.write(Boolean(0) + "<br/>"); //false
+		document.write(Boolean(10) + "<br/>"); //true
+		document.write(Boolean(-10) + "<br/>"); //true
+		document.write(Boolean(3 + 2 + 7) + "<br/>"); //true
+		// 데이터가 없으면 false
+		document.write(Boolean(undefined) + "<br/>"); //false
+		document.write(Boolean(null) + "<br/>"); //false
+		document.write(Boolean("") + "<br/>"); //false
+		// 연산이 불가능할경우 false Not A Number
+		document.write(Boolean(3/"H") + "<br/>"); //false
+		// 실수라도 값이 있으면 true
+		document.write(Boolean(3.5) + "<br/>"); //true
+		
+	</script>
+
+</body>
+</html>

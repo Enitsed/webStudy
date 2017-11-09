@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_022_dom_childNodes</title>
+</head>
+<body>
+	<div id="wrap">
+		<p>content</p>
+		<a href="">세미나 장소</a> <span><a href="">정보</a></span>
+	</div>
+
+	<script type="text/javascript">
+		// div의 모든 자식 노드를 리턴한다.
+		var divChildNode = document.getElementById("wrap").childNodes;
+		console.log("length:" + divChildNode.length); // 7 텍스트 노드도 리턴하기 때문에 공백도 카운팅된다.
+	
+		// div요소에서 엘리먼트(요소) 노드만 리턴한다.
+		var divChildren = document.getElementById("wrap").children;
+		console.log("length2:" + divChildren.length); // 3 엘리먼트 노드만 리턴한다.
+	
+		// span요소의 첫번째 자식 요소에 스타일 적용
+		var sNode = document.getElementsByTagName("span")[0];
+		var sFirstChild = sNode.firstChild;
+		sFirstChild.style.backgroundColor = "red";
+	</script>
+</body>
+</html>

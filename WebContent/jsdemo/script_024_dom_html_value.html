@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_024_dom_html_value</title>
+</head>
+<body>
+	<input type="text" name="data" id="data" />
+	<div id="dv"></div>
+	<script type="text/javascript">
+		document.getElementById("data").value = "value속성";
+		document.getElementById("dv").innerText = "<p>Text</p>";
+		//document.getElementById("dv").innerHTML = "<p>Text</p>";
+		document.write("<hr/>");
+	
+		//value 속성
+		document.write(document.getElementById("data").value + "<br/>");
+		//Text
+		document.write(document.getElementById("dv").innerText + "<br/>");
+		//<p>Text</p>
+		document.write(document.getElementById("dv").innerHTML + "<br/>");
+	</script>
+</body>
+</html>

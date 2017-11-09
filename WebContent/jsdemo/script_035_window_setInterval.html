@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_035_window_setInterval</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var options = {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+			weekday: 'long',
+			hour: 'numeric',
+			minute: 'numeric',
+			second: 'numeric'
+		}
+
+		var timer = window.setInterval(function() {
+			var time = new Date();
+			document.getElementById("time").innerHTML = time.toLocaleString('ko-KR', options);
+		}, 1000);
+
+		document.getElementsByTagName("input")[0].onclick = function() {
+			window.clearInterval(timer);
+		};
+	};
+</script>
+</head>
+<body>
+	<div id="time">time</div>
+	<input type="button" value="Stop timer">
+</body>
+</html>

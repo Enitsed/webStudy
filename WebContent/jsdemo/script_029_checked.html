@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_029_checked</title>
+</head>
+<body>
+	<form name="frm" action="#" method="get">
+		<textarea rows="3" cols="20">
+Most JavaScript programs contain many JavaScript statements.
+The statements are executed, one by one, in the same order as they are written.
+In this example x, y, and z are given values, and finally z is displayed: 
+Most JavaScript programs contain many JavaScript statements.
+The statements are executed, one by one, in the same order as they are written.In this example x, y, and z are given values, and finally z is displayed: 
+</textarea>
+
+		<br /> <input type="checkbox" name="admin" />약관에 동의합니다.<br /> <input
+			type="checkbox" name="allCheck" id="allCheck">전체선택<br /> <input
+			type="checkbox" name="subject1" id="subject1">과목1<br /> <input
+			type="checkbox" name="subject2" id="subject2">과목2<br /> <input
+			type="checkbox" name="subject3" id="subject3">과목3<br /> <input
+			type="submit" value="commit" />
+	</form>
+
+	<script type="text/javascript">
+		document.frm.allCheck.onclick = function() {
+			document.getElementsByName("admin")[0].checked = this.checked;
+			document.getElementById("subject1").checked = this.checked;
+			document.getElementById("subject2").checked = this.checked;
+			document.getElementById("subject3").checked = this.checked;
+		};
+		document.frm.onsubmit = function() {
+			var admin = document.frm.admin;
+			if (!admin.checked) {
+				alert("약관에 동의 해야 합니다.");
+				return false;
+			}
+		};
+	</script>
+
+</body>
+</html>
