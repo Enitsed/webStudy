@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_051_research</title>
+<style type="text/css">
+div {
+	margin: 5px;
+}
+
+form {
+	margin-bottom: 10px;
+}
+
+#answer {
+	border: 2px solid purple;
+	visibility: hidden;
+}
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var answerBtn = document.getElementById("answerBtn");
+		var radioBtns = document.getElementsByTagName("input");
+		answerBtn.onclick = function() {
+			var cnt = 0;
+			for (var i = 0; i < radioBtns.length; i++) {
+				if (!radioBtns[i].checked) {
+					cnt++;
+				}
+			}
+			if (cnt == 4) {
+				alert("하나 이상 선택해 주세요.");
+				return false;
+			}
+
+			if (!radioBtns[0].checked) {
+				alert("오답입니다.");
+				return false;
+			}
+
+			document.getElementById("answer").style.visibility = "visible";
+		}
+	}
+</script>
+</head>
+<body>
+	<div id="question">
+		<p>2. 줄바꿈을 위한 요소는 무엇인가?</p>
+
+		<form action="#">
+			<input type="radio" value="BR" name="quiz" />(1) BR <input
+				type="radio" value="DIV" name="quiz" />(2) DIV <input type="radio"
+				value="SPAN" name="quiz" />(3) SPAN <input type="radio"
+				value="MENU" name="quiz" />(4) MENU
+		</form>
+
+		<a href="script_050_research.html"><button id="prevBtn">이전</button></a>
+		<button id="answerBtn">정답 풀이</button>
+	</div>
+	<div id="answer">
+		<p>정답: 1</p>
+		<p>BR은 강제 줄바꿈을 의미하는 요소입니다.</p>
+	</div>
+</body>
+</html>

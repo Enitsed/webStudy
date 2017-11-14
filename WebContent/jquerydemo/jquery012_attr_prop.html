@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery012_attr_prop</title>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		/*
+		 * 속성 : attribute, property
+		 */
+		$('button').click(function() {
+
+			// jquery001_cdn.html
+			// alert($('a').attr('href'));
+
+			// http://localhost:8090/frontdemo/jquerydemo/jquery001_cdn.html
+			// alert($('a').prop('href'));
+
+			// undefined
+			// alert($('input').attr('checked'));
+
+			// false
+			alert($('input').prop('checked'));
+
+		});
+
+	});
+</script>
+</head>
+<body>
+	<button id="btn">commit</button>
+	<a href="jquery001_cdn.html">첫페이지</a>
+	<input type="checkbox" />
+	<div>test</div>
+</body>
+</html>

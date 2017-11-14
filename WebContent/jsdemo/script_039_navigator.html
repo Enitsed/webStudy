@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_039_navigator</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	 * navigator 객체: 현재 방문자가 사용하는 브라우저 정보와 운영체제의 정보를 제공해주는 객체이다.
+	 */
+	
+		// 브라우저 코드명
+		// appCodeName:Mozilla
+		document.write("appCodeName: " + navigator.appCodeName + "<br />");
+	
+		// 브라우저 이름
+		// appName: Netscape
+		document.write("appName: " + navigator.appName + "<br />");
+	
+		// 브라우저 버전
+		// appVersion: 5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36
+		document.write("appVersion: " + navigator.appVersion + "<br />");
+	
+		// 브라우즈에 사용된 언어
+		// language: ko
+		document.write("language: " + navigator.language + "<br />");
+	
+		// 브라우저에 사용된 엔진 정보
+		// product: Gecko
+		document.write("product: " + navigator.product + "<br />");
+	
+		// 브라우저가 실행된 운영체제 정보
+		// platform: Win32
+		document.write("platform: " + navigator.platform + "<br />");
+	
+		// 브라우저와 운영체제에 대한 종합정보
+		// userAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36
+		document.write("userAgent: " + navigator.userAgent + "<br />");
+	
+		// java 사용 여부
+		// javaEnabled: false
+		document.write("javaEnabled: " + navigator.javaEnabled());
+	</script>
+
+</body>
+</html>

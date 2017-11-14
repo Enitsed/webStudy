@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var arr = [ 10, 20, 30, 40 ];
+		/* 		
+		for (var i in arr)
+					document.write(arr[i] + "<br/>"); 
+		*/
+
+		/* 
+		$(arr).each(function(index, value) {
+			document.write(index + " , " + value + "<br/>");
+		});
+		*/
+
+		/* 		
+		$.each(arr, function(index, value) {
+			document.write(index + " , " + value + "<br/>");
+		});
+		 */
+
+		/* 
+		$.each(arr, function(index) {
+			document.write(index + "<br/>");
+		});
+		*/
+
+		var size = $('ul li');
+		// alert(size.length);
+		/* 
+				// 출력되는 value 값에 의해서 DOM에 의한 객체인지 JQUERY에 의한 객체인지 알수 있다.
+				$('ul li').each(function(index, value) {
+					// document.write(index + " " + value.nodeName + "<br/>");
+					// document.write(index + " " + value.innerText + "<br/>");
+					// [object HTMLLIElement] => DOM 객체
+					// document.write(index + " " + value + "<br/>");
+					document.write(index + " " + value.childNodes[0].nodeValue + "<br/>");
+					// [object Object] => JQUERY 객체
+					// document.write(index + " " + $(value) + "<br/>");
+					// document.write(index + " " + $(value).text() + "<br/>");
+
+				});
+		 */
+		$.each($('ul li'), function(index, value) {
+			document.write(index + "," + value.nodeName + "<br/>");
+		});
+
+
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li>content1</li>
+		<li>content2</li>
+		<li>content3</li>
+	</ul>
+</body>
+</html>

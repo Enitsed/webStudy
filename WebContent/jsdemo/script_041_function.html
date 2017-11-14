@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_041_function</title>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	var color = [ 'white', 'yellow', 'aqua', 'purple' ];
+	var i = 0;
+	// 콜백함수 : 이벤트가 발생 된 후 실행될 함수
+	window.onload = function() {
+		document.getElementsByTagName("button")[0].onclick = colorBg;
+	}
+
+	function colorBg() {
+		i++;
+		if (i >= color.length)
+			i = 0;
+		var bodyTag = document.getElementsByTagName("body")[0];
+		bodyTag.style.backgroundColor = color[i];
+	}
+</script>
+</head>
+<body>
+	<button>background color change</button>
+</body>
+</html>
+
+
+
+
+
+
+

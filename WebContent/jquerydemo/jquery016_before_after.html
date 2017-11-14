@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery016_before_after</title>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('button').click(function() {
+			//$('기존요소').before('추가 요소');
+			$('#myList').before('<li id="bNode">before</li>');
+
+			//$('기존요소').after('추가 요소');
+			$('#myList').after('<li id="aNode">after</li>');
+
+			//$('추가요소').insertBefore('추가 요소');
+			$('<li>insertBefore</li>').insertBefore('#myList');
+
+			//$('추가요소').insertAfter('추가 요소');
+			$('<li>insertAfter</li>').insertAfter('#myList');
+
+			//이벤트 연결을 해제한다
+			// $(this).unbind();
+			$(this).off();
+
+		});
+	});
+</script>
+</head>
+<body>
+	<button>commit</button>
+	<ul>
+		<li id="myList">content</li>
+	</ul>
+
+</body>
+</html>

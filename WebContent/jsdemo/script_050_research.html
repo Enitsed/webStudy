@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_050_research</title>
+<style type="text/css">
+div {
+	margin: 5px;
+}
+
+form {
+	margin-bottom: 10px;
+}
+
+#answer {
+	border: 2px solid purple;
+	visibility: hidden;
+}
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		var answerBtn = document.getElementById("answerBtn");
+		var radioBtns = document.getElementsByTagName("input");
+		answerBtn.onclick = function() {
+			var cnt = 0;
+			for (var i = 0; i < radioBtns.length; i++) {
+				if (!radioBtns[i].checked) {
+					cnt++;
+				}
+			}
+			if (cnt == 4) {
+				alert("하나 이상 선택해 주세요.");
+				return false;
+			}
+
+			if (!radioBtns[1].checked) {
+				alert("오답입니다.");
+				return false;
+			}
+
+			document.getElementById("answer").style.visibility = "visible";
+		}
+
+	}
+</script>
+</head>
+<body>
+	<div id="question">
+		<p>1. 클라이언트 프로그램이 아닌 것은?</p>
+
+		<form action="#">
+			<input type="radio" value="HTML" name="quiz" />(1) HTML <input
+				type="radio" value="ORACLE" name="quiz" />(2) ORACLE <input
+				type="radio" value="CSS" name="quiz" />(3) CSS <input type="radio"
+				value="JAVASCRIPT" name="quiz" /> (4) JAVASCRIPT
+		</form>
+
+		<a href="script_051_research.html"><button id="nextBtn">다음</button></a>
+		<button id="answerBtn">정답 풀이</button>
+
+	</div>
+	<div id="answer">
+		<p>정답: 2</p>
+		<p>ORACLE은 데이터베이스 관리 시스템입니다.</p>
+	</div>
+
+</body>
+</html>

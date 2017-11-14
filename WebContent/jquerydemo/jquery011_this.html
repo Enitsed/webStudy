@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery011_this</title>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('button').click(process);
+	});
+
+	function process() {
+		// [object HTMLButtonElement] , [object Object]
+		// 		DOM			, JQUERY
+		// alert(this + " , " + $(this));
+
+		// BUTTON
+		// alert(this.nodeName);
+		// alert($(this)[0].nodeName); DOM 으로 객체 변환 후 리턴
+
+		// BODY
+		alert($(this).parent()[0].nodeName); // DOM으로 객체 변환후 리턴
+	}
+</script>
+</head>
+<body>
+	<button id="btn">commit</button>
+
+</body>
+</html>
