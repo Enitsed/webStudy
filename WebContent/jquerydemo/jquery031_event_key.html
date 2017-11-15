@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery031_event_key</title>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<script type="text/javascript">
+	/*
+	keydown(), keypress()
+	  : 선택한 요소에서 키보드 자판을 눌렀을때 이벤트가 발생한다.
+	    차이점은 keydown()은 모든 자판에 대한 고유 키값을 가져올 수 있으나
+	    keypress()은 문자(a~z, !, @, #,...등)자판에 대한 고유 키값을
+	    가져올 수 있으나 (e.g. ALT, CTRL, SHIFT, ESC)문자, 한글은 가져올수 없다.
+	  
+	  keyup() : 선택한 요소에서 키보드에 자판을 눌렀다 떼었을 때 
+	                  이벤트가 발생한다.
+	  
+	*/
+	$(document).ready(function() {
+		// input이 커서를 가지고 있는 경우 이벤트 발생
+		$('input').on('focus mouse over', function() {
+			$('div').css({
+				'background-color' : 'yellow'
+			});
+		});
+
+		$('#fname').keydown(function(e) {
+			//$('p').text('keydown');
+			console.log('keydown');
+			// 대소문자 구분없이 대문자로만 나온다.
+			console.log(e.which + "," + String.fromCharCode(e.which));
+		});
+
+		$('#fname').keypress(function(e) {
+			//$('p').text('keypress');
+			//console.log('keypress');
+			// 대, 소문자 구분 시 keypress 사용해야한다.
+			//console.log(e.which + "," + String.fromCharCode(e.which));
+		});
+
+		$('#fname').keyup(function() {
+			//$('p').text('keyup');
+			//console.log('keyup');
+		});
+	});
+</script>
+<body>
+	<div>
+		<input type="text" name="id" id="fid" />
+	</div>
+
+	<button id="btn">keyboard</button>
+	<input type="text" name="id" id="fname" />
+	<p></p>
+</body>
+</html>
