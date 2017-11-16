@@ -41,7 +41,7 @@ h1 {
 #frame {
 	width: 232px;
 	height: 54px;
-	/* overflow: hidden; */
+	overflow: hidden;
 	position: relative;
 	margin: 10px auto;
 }
@@ -66,12 +66,46 @@ h1 {
 		//<li>의 너비값을 저장 (li_width=80)
 		var li_width = $("li:first", list).width();
 
+		// <li> 태그 중 인덱스 값이 3보다 작은 <li>태그만 복제합니다.
+		// 그러므로 0,1,2 인덱스에 해당하는 <li>태그가 복제되어 <ul id="banner">에 추가합니다.
+		// $('ul>li:lt(3)')
 		var copyObj = $('>li:lt(' + show_num + ')', list).clone();
 		list.append(copyObj);
 
-		$('.prev').click(function() {});
-		$('.next').click(function() {});
+		//(1) 다음 버튼을 클릭 할때 마다 이벤트 핸들러를 실행합니다.
 
+		$('.next').on('click', function() {
+			// num값이 5일 경우 조건문 실행
+			if (num == total) {
+				num = 0;
+				list.css({
+					"margin-left:" : num
+				});
+			}
+			// num에 값을 1씩 증가시킨다.
+			num++;
+
+			list.animate({
+				"marginLeft" : -li_width * num + "px"
+			}, 500);
+			return false;
+		});
+
+		$('.prev').on('click', function() {
+			// num값이 0일 경우 조건문 실행
+			if (num == 0) {
+				num = total;
+				list.css({
+					"margin-left:" : -num * li_width + "px"
+				});
+			}
+			// num에 값을 1씩 감소시킨다.
+			num--;
+			list.animate({
+				"marginLeft" : -li_width * num + "px"
+			}, 500);
+			return false;
+		});
 
 	});
 </script>
