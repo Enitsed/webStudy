@@ -27,12 +27,12 @@
 <!-- <link href="css/jquery.bxslider.min.css" rel="stylesheet" />  -->
 <!-- 구글 세계 언어 선택 -->
 <script type="text/javascript">
-	function googleTranslateElementInit() {
-		new google.translate.TranslateElement({
-			pageLanguage : 'ko',
-			layout : google.translate.TranslateElement.InlineLayout.SIMPLE
-		}, 'google_translate_element');
-	}
+    function googleTranslateElementInit() {
+	new google.translate.TranslateElement({
+	    pageLanguage : 'ko',
+	    layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+	}, 'google_translate_element');
+    }
 </script>
 <script type="text/javascript"
 	src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
