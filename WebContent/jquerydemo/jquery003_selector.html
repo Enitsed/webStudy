@@ -7,42 +7,41 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
-	$(document).ready(function() {
-		// button의 부모요소
-		$('button').parent().css({
-			'width' : '200px',
-			'height' : '200px',
-			'border' : '1px solid black'
-		});
-
-		// ul요소의 모든 자식요소
-		$('ul').children().css({
-			'color' : 'red'
-		});
-
-		// ul요소의 이전 이웃요소
-		$('ul').prev().css({
-			'background-color' : 'yellow'
-		});
-
-		// ul요소의 다음 이웃요소
-		$('ul').next().css({
-			'background-color' : 'aqua'
-		});
-
-		// li요소들 중에서 짝수
-		// 인덱스 0 부터 시작
-		$('li:even').css({
-			'border' : '2px solid black'
-		});
-
-		// 인덱스 1부터 시작
-		$('li:nth-child(even)').css({
-			'border' : '2px solid green'
-		});
-
-
+    $(document).ready(function() {
+	// button의 부모요소
+	$('button').parent().css({
+	    'width' : '200px',
+	    'height' : '200px',
+	    'border' : '1px solid black'
 	});
+
+	// ul요소의 모든 자식요소
+	$('ul').children().css({
+	    'color' : 'red'
+	});
+
+	// ul요소의 이전 이웃요소
+	$('ul').prev().css({
+	    'background-color' : 'yellow'
+	});
+
+	// ul요소의 다음 이웃요소
+	$('ul').next().css({
+	    'background-color' : 'aqua'
+	});
+
+	// li요소들 중에서 짝수
+	// 인덱스 0 부터 시작
+	$('li:even').css({
+	    'border' : '2px solid black'
+	});
+
+	// 인덱스 1부터 시작
+	$('li:nth-child(even)').css({
+	    'border' : '2px solid green'
+	});
+
+    });
 </script>
 </head>
 <body>
